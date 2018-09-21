@@ -1,16 +1,10 @@
 <div class="container">
-
+  <app-cockpit></app-cockpit>
 </div>
 <hr>
 <div class="row">
   <div class="col-xs-12">
-    <div class="panel panel-default" *ngFor="let element of serverElement">
-      <div class="panel-heading">{{element.name}}</div>
-      <div class="panel-body">
-        <p><strong *ngIf="element.type === 'server'" style="color: red">{{element.content}}</strong></p>
-        <em *ngIf="element.type === 'blueprint'">{{element.content}}</em>
-      </div>
-    </div>
+    <app-server-element *ngFor="let serverElement of serverElements"></app-server-element>
   </div>
 </div>
 
