@@ -14,3 +14,6 @@ None - doesn't show any attribute
 Native - uses shadow dom technology due to which it will work only on those browsers which support shadow dom technology
 
 Local reference can be added using # , instead of ngModel(2 way binding when not required)
+
+@ViewChild can be used to reference to element as well as component and it is of type ElementRef(Angular type from Angular/core)
+this.serverContentInput.nativeElement.value
