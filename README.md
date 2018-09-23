@@ -17,3 +17,6 @@ Local reference can be added using # , instead of ngModel(2 way binding when not
 
 @ViewChild can be used to reference to element as well as component and it is of type ElementRef(Angular type from Angular/core)
 this.serverContentInput.nativeElement.value
+DOM can be accessed through but it is a bad practice
+
+Anything placed between the opening and closed tag of own component is lost by default it's common Angular behaviour, <ng-content> will help in this case
