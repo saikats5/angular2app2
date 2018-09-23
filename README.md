@@ -20,3 +20,13 @@ this.serverContentInput.nativeElement.value
 DOM can be accessed through but it is a bad practice
 
 Anything placed between the opening and closed tag of own component is lost by default it's common Angular behaviour, <ng-content> will help in this case
+
+ANGULAR LIFECYCLE
+ngOnChanges -- executed multiple times, executed when the component is created, called when bound Input(@Input) property changes, 
+ngOnInit -- called once the component is initialized, objects/propeties can be accessed and it is after the constructor execution
+ngDoCheck -- called during every change detection run(every small change within the component, even if we click the button which doesn't change anything but will trigger this method to check if any changes occur)
+ngAfterContentInit() -- called after content(ng-content) has been projected into view
+ngAfterContentChecked() -- called everytime the projected content has been checked
+ngAfterViewInit() -- called after the component's view(and child views) has been initialized
+ngAfterViewChecked() -- called everytime the view (and child views) have been checked
+ngOnDestroy() -- called once the component is about to be destroyed 
