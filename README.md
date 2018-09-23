@@ -30,3 +30,5 @@ ngAfterContentChecked() -- called everytime the projected content has been check
 ngAfterViewInit() -- called after the component's view(and child views) has been initialized
 ngAfterViewChecked() -- called everytime the view (and child views) have been checked
 ngOnDestroy() -- called once the component is about to be destroyed 
+
+import and implement angular lifecycle is good practice, it is not mandatory
