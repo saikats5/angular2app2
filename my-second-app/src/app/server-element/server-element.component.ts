@@ -18,5 +18,6 @@ export class ServerElementComponent implements OnInit, OnChanges {
   ngOnInit() {
     console.log('ngOnInit Called');
   }
+  ngOn
 
 }
