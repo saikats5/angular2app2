@@ -25,4 +25,8 @@ export class AppComponent {
     });
   }
 
+  onDestryFirst(){
+    this.serverElements.splice(0, 1);
+  }
+
 }
