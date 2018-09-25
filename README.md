@@ -32,3 +32,5 @@ ngAfterViewChecked() -- called everytime the view (and child views) have been ch
 ngOnDestroy() -- called once the component is about to be destroyed 
 
 import and implement angular lifecycle is good practice, it is not mandatory
+
+local template/text access can be done on ngAfterViewInit()

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewEncapsulation, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation, ViewChild, ElementRef, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -8,6 +8,7 @@ import { Component, OnInit, Input, ViewEncapsulation, OnChanges, SimpleChanges }
 })
 export class ServerElementComponent implements OnInit, OnChanges {
   @Input('srvElement') element: {type: string, name: string, content: string};
+  @ViewChild('heading') header: ElementRef;
   constructor() { 
     console.log('Constructor Called');
   }
@@ -15,9 +16,20 @@ export class ServerElementComponent implements OnInit, OnChanges {
     console.log('ngOnChanges Called');
     console.log(changes); //changes-->object-->currentValue(obj properties)/firstChange/previousValue-->
   }
-  ngOnInit() {
+  ngOnInit(){
     console.log('ngOnInit Called');
   }
-  ngOn
-
+  ngAfterContentInit(){
+    console.log('ngAfterContentInit');
+  }
+  ngAfterContentChecked(){
+    console.log('ngAfterContentChecked');
+  }
+  ngAfterAfterViewInit(){
+    console.log('ngAfterAfterViewInit');
+    console.log(this.header.nativeElement.textContent); //will work
+  }
+  ngAfterAfterViewChecked(){
+    console.log('ngAfterAfterViewChecked');
+  }
 }
